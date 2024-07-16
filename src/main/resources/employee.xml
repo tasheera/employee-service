@@ -6,24 +6,24 @@
 	http://www.springframework.org/schema/context
 	http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
-    <bean id="employee" class="com.hsenid.employeeservice.EmployeeService" >
-        <property name="ids" >
-            <list>
-                <value>1</value>
-                <value>2</value>
-                <value>3</value>
-            </list>
-        </property>
+<!--    <bean id="employee" class="com.hsenid.employeeservice.service.EmployeeService" >-->
+<!--        <property name="ids" >-->
+<!--            <list>-->
+<!--                <value>1</value>-->
+<!--                <value>2</value>-->
+<!--                <value>3</value>-->
+<!--            </list>-->
+<!--        </property>-->
 
-        <property name="names">
-            <list>
-                <value>John Doe</value>
-                <value>Jane Smith</value>
-                <value>Michael Johnson</value>
-            </list>
-        </property>
-    </bean>
+<!--        <property name="names">-->
+<!--            <list>-->
+<!--                <value>John Doe</value>-->
+<!--                <value>Jane Smith</value>-->
+<!--                <value>Michael Johnson</value>-->
+<!--            </list>-->
+<!--        </property>-->
+<!--    </bean>-->
 
-    <context:annotation-config />
+<!--    <context:annotation-config />-->
 
 </beans>
