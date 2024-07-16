@@ -21,6 +21,25 @@ public class EmployeeService {
         return employeeRepo.findAll();
     }
 
+    public List<Employee> find5YearsAnd90NIC(){
+        return employeeRepo.find5YearsAnd90NIC();
+    }
 
+    public void addEmployee(Employee employee) {
+        employeeRepo.save(employee);
+    }
+
+
+    public void getEmployeesByDepartmentName(String departmentName) {
+        employeeRepo.getEmployeesByDepartmentName(departmentName);
+    }
+
+    public void editEmployee(Employee employee){
+        employeeRepo.save(employee);
+    }
+
+    public void deleteEmployee(Employee employee) {
+        employeeRepo.delete(employee);
+    }
 
 }
