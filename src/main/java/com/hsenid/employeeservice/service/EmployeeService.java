@@ -30,8 +30,8 @@ public class EmployeeService {
     }
 
 
-    public void getEmployeesByDepartmentName(String departmentName) {
-        employeeRepo.getEmployeesByDepartmentName(departmentName);
+    public List<Employee> getEmployeesByDepartmentName(String depName) {
+        return employeeRepo.getEmployeesByDepartmentName(depName);
     }
 
     public void editEmployee(Employee employee){
@@ -40,6 +40,16 @@ public class EmployeeService {
 
     public void deleteEmployee(Employee employee) {
         employeeRepo.delete(employee);
+    }
+
+    public Employee deleteEmployeeByEmployeeId(int employeeId) {
+        Employee employee = employeeRepo.findById(employeeId).get();
+        employeeRepo.deleteById(employeeId);
+        return employee;
+    }
+
+    public List<Employee> getAllEmployeesByName(String name) {
+        return employeeRepo.viewEmployeeByName(name);
     }
 
 }

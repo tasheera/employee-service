@@ -1,6 +1,7 @@
 package com.hsenid.employeeservice.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
@@ -20,6 +21,8 @@ public class Employee {
     private String name;
     private String nic;
     private String email;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")// change the data format , otherwise it returns long number
     private Date joinDate;
     private int departmentId;
 }
