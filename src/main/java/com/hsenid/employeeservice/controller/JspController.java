@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import java.util.List;
 
 @Controller
 public class JspController {
@@ -17,7 +18,10 @@ public class JspController {
 
     @GetMapping("/")
     public String getEmployees(Model model) {
-        return "employees";// jsp file name
+        List<Employee> employeeList= employeeService.getAllEmployees();
+        model.addAttribute("employees", employeeList);
+        return "index";// jsp file name
 
     }
+
 }

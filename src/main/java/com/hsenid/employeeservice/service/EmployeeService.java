@@ -43,13 +43,17 @@ public class EmployeeService {
     }
 
     public Employee deleteEmployeeByEmployeeId(int employeeId) {
-        Employee employee = employeeRepo.findById(employeeId).get();
+        Employee employee = employeeRepo.findById(employeeId).orElse(null);
         employeeRepo.deleteById(employeeId);
         return employee;
     }
 
     public List<Employee> getAllEmployeesByName(String name) {
         return employeeRepo.viewEmployeeByName(name);
+    }
+
+    public Employee getEmployeeByEmployeeId(int employeeId) {
+        return employeeRepo.findById(employeeId).get();
     }
 
 }

@@ -25,4 +25,5 @@ public class Employee {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")// change the data format , otherwise it returns long number
     private Date joinDate;
     private int departmentId;
+
 }

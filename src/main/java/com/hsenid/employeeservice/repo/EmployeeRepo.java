@@ -18,6 +18,4 @@ public interface EmployeeRepo extends JpaRepository<Employee, Integer> {
     @Query(value = "select employee.id, employee.name, employee.nic, employee.email, employee.join_date, employee.department_id from employee join department on department.id= employee.department_id where department.department_name=?1", nativeQuery = true)
     List<Employee> getEmployeesByDepartmentName(String depName);
 
-
-
 }
